@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200726 04:36:21.025" rpa="false">
+<suite id="s1" name="Registration" source="C:\Users\Admin\PycharmProjects\FirstFramework\TestCases\Registration\Registration.robot">
+<test id="s1-t1" name="TC_001_Successful navigation to registration page">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:36:21.511" endtime="20200726 04:36:21.512"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:21.517" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:36:21.515" endtime="20200726 04:36:21.517"></status>
+</kw>
+<msg timestamp="20200726 04:36:21.518" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:36:21.513" endtime="20200726 04:36:21.518"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:36:21.519" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:36:21.519" endtime="20200726 04:36:38.522"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:36:38.523" endtime="20200726 04:36:40.679"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:36:40.743" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:36:40.680" endtime="20200726 04:36:40.743"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:36:40.744" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:36:40.744" endtime="20200726 04:36:45.241"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_001.png</arg>
+</arguments>
+<msg timestamp="20200726 04:36:45.686" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_001.png"&gt;&lt;img src="../Snapshots/Registration/TC_001.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:36:45.243" endtime="20200726 04:36:45.686"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:36:45.687" endtime="20200726 04:36:47.930"></status>
+</kw>
+<doc>This test case validates the successful navigation to registration page</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:36:21.510" endtime="20200726 04:36:47.931" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC_002_Successful Registration with valid credentials">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:36:47.937" endtime="20200726 04:36:47.938"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.941" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:36:47.940" endtime="20200726 04:36:47.942"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.943" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:36:47.939" endtime="20200726 04:36:47.943"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.name_xpath</arg>
+</arguments>
+<assign>
+<var>${namelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.948" level="INFO">${value} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:36:47.946" endtime="20200726 04:36:47.948"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.950" level="INFO">${namelink} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:36:47.944" endtime="20200726 04:36:47.950"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.username_xpath</arg>
+</arguments>
+<assign>
+<var>${usernamelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.956" level="INFO">${value} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:36:47.953" endtime="20200726 04:36:47.956"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.957" level="INFO">${usernamelink} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:36:47.951" endtime="20200726 04:36:47.958"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.password_xpath</arg>
+</arguments>
+<assign>
+<var>${passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.964" level="INFO">${value} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:36:47.961" endtime="20200726 04:36:47.965"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.966" level="INFO">${passlink} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:36:47.959" endtime="20200726 04:36:47.966"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_password_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.972" level="INFO">${value} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:36:47.971" endtime="20200726 04:36:47.972"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.972" level="INFO">${conf_passlink} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:36:47.968" endtime="20200726 04:36:47.973"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.976" level="INFO">${value} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:36:47.974" endtime="20200726 04:36:47.976"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.976" level="INFO">${emaillink} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:36:47.973" endtime="20200726 04:36:47.976"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.979" level="INFO">${value} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:36:47.978" endtime="20200726 04:36:47.979"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.980" level="INFO">${conf_emaillink} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:36:47.977" endtime="20200726 04:36:47.980"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_button_xpath</arg>
+</arguments>
+<assign>
+<var>${reg_buttonlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.983" level="INFO">${value} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:36:47.981" endtime="20200726 04:36:47.983"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.984" level="INFO">${reg_buttonlink} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:36:47.981" endtime="20200726 04:36:47.984"></status>
+</kw>
+<kw name="Registration_navigation">
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:36:47.988" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:36:47.987" endtime="20200726 04:36:47.988"></status>
+</kw>
+<msg timestamp="20200726 04:36:47.988" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:36:47.986" endtime="20200726 04:36:47.988"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:36:47.989" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:36:47.989" endtime="20200726 04:36:58.996"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:36:58.996" endtime="20200726 04:37:01.142"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:37:01.199" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:37:01.143" endtime="20200726 04:37:01.199"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:01.201" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:37:01.200" endtime="20200726 04:37:03.486"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200726 04:37:03.577" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20200726 04:37:03.487" endtime="20200726 04:37:03.577"></status>
+</kw>
+<status status="PASS" starttime="20200726 04:36:47.986" endtime="20200726 04:37:03.578"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${namelink}</arg>
+<arg>KarSh17</arg>
+</arguments>
+<msg timestamp="20200726 04:37:03.579" level="INFO">Typing text 'KarSh17' into text field 'xpath://input[@id='jform_name']'.</msg>
+<status status="PASS" starttime="20200726 04:37:03.579" endtime="20200726 04:37:03.830"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${usernamelink}</arg>
+<arg>KarunaShMaya15</arg>
+</arguments>
+<msg timestamp="20200726 04:37:03.831" level="INFO">Typing text 'KarunaShMaya15' into text field 'xpath://input[@id='jform_username']'.</msg>
+<status status="PASS" starttime="20200726 04:37:03.831" endtime="20200726 04:37:04.154"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${passlink}</arg>
+<arg>Bunny07</arg>
+</arguments>
+<msg timestamp="20200726 04:37:04.155" level="INFO">Typing text 'Bunny07' into text field 'xpath://input[@id='jform_password1']'.</msg>
+<status status="PASS" starttime="20200726 04:37:04.154" endtime="20200726 04:37:04.380"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_passlink}</arg>
+<arg>Bunny07</arg>
+</arguments>
+<msg timestamp="20200726 04:37:04.382" level="INFO">Typing text 'Bunny07' into text field 'xpath://input[@id='jform_password2']'.</msg>
+<status status="PASS" starttime="20200726 04:37:04.381" endtime="20200726 04:37:04.606"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${emaillink}</arg>
+<arg>sharma07@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:37:04.607" level="INFO">Typing text 'sharma07@gmail.com' into text field 'xpath://input[@id='jform_email1']'.</msg>
+<status status="PASS" starttime="20200726 04:37:04.606" endtime="20200726 04:37:04.936"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_emaillink}</arg>
+<arg>sharma07@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:37:04.937" level="INFO">Typing text 'sharma07@gmail.com' into text field 'xpath://input[@id='jform_email2']'.</msg>
+<status status="PASS" starttime="20200726 04:37:04.937" endtime="20200726 04:37:05.273"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reg_buttonlink}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:05.274" level="INFO">Clicking button 'xpath://button[@class='validate']'.</msg>
+<status status="PASS" starttime="20200726 04:37:05.273" endtime="20200726 04:37:08.604"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_002.png</arg>
+</arguments>
+<msg timestamp="20200726 04:37:09.032" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_002.png"&gt;&lt;img src="../Snapshots/Registration/TC_002.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:37:08.605" endtime="20200726 04:37:09.032"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Your account has been created</arg>
+</arguments>
+<msg timestamp="20200726 04:37:09.064" level="INFO">Current page contains text 'Your account has been created'.</msg>
+<status status="PASS" starttime="20200726 04:37:09.036" endtime="20200726 04:37:09.065"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:37:09.066" endtime="20200726 04:37:11.357"></status>
+</kw>
+<doc>This test case validates the successful registration with valid credentials</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:36:47.935" endtime="20200726 04:37:11.359" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TC_003_Unsuccessful Registration due to an existing username">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:37:11.365" endtime="20200726 04:37:11.366"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.369" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:11.368" endtime="20200726 04:37:11.369"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.369" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:11.367" endtime="20200726 04:37:11.369"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.name_xpath</arg>
+</arguments>
+<assign>
+<var>${namelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.372" level="INFO">${value} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:37:11.371" endtime="20200726 04:37:11.372"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.372" level="INFO">${namelink} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:37:11.370" endtime="20200726 04:37:11.372"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.username_xpath</arg>
+</arguments>
+<assign>
+<var>${usernamelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.375" level="INFO">${value} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:37:11.374" endtime="20200726 04:37:11.375"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.376" level="INFO">${usernamelink} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:37:11.373" endtime="20200726 04:37:11.376"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.password_xpath</arg>
+</arguments>
+<assign>
+<var>${passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.379" level="INFO">${value} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:37:11.378" endtime="20200726 04:37:11.379"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.380" level="INFO">${passlink} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:37:11.377" endtime="20200726 04:37:11.380"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_password_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.383" level="INFO">${value} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:37:11.382" endtime="20200726 04:37:11.383"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.384" level="INFO">${conf_passlink} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:37:11.381" endtime="20200726 04:37:11.384"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.387" level="INFO">${value} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:37:11.386" endtime="20200726 04:37:11.387"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.388" level="INFO">${emaillink} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:37:11.386" endtime="20200726 04:37:11.388"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.391" level="INFO">${value} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:37:11.390" endtime="20200726 04:37:11.391"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.392" level="INFO">${conf_emaillink} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:37:11.389" endtime="20200726 04:37:11.392"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_button_xpath</arg>
+</arguments>
+<assign>
+<var>${reg_buttonlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.395" level="INFO">${value} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:37:11.394" endtime="20200726 04:37:11.395"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.396" level="INFO">${reg_buttonlink} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:37:11.393" endtime="20200726 04:37:11.396"></status>
+</kw>
+<kw name="Registration_navigation">
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:11.400" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:11.398" endtime="20200726 04:37:11.400"></status>
+</kw>
+<msg timestamp="20200726 04:37:11.400" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:11.398" endtime="20200726 04:37:11.400"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:11.401" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:37:11.401" endtime="20200726 04:37:22.755"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:37:22.756" endtime="20200726 04:37:24.886"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:37:24.955" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:37:24.887" endtime="20200726 04:37:24.955"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:24.957" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:37:24.956" endtime="20200726 04:37:27.371"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200726 04:37:27.434" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20200726 04:37:27.372" endtime="20200726 04:37:27.434"></status>
+</kw>
+<status status="PASS" starttime="20200726 04:37:11.397" endtime="20200726 04:37:27.434"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${namelink}</arg>
+<arg>KarSh2</arg>
+</arguments>
+<msg timestamp="20200726 04:37:27.435" level="INFO">Typing text 'KarSh2' into text field 'xpath://input[@id='jform_name']'.</msg>
+<status status="PASS" starttime="20200726 04:37:27.435" endtime="20200726 04:37:27.740"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${usernamelink}</arg>
+<arg>KarunaShMaya1</arg>
+</arguments>
+<msg timestamp="20200726 04:37:27.741" level="INFO">Typing text 'KarunaShMaya1' into text field 'xpath://input[@id='jform_username']'.</msg>
+<status status="PASS" starttime="20200726 04:37:27.741" endtime="20200726 04:37:28.068"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${passlink}</arg>
+<arg>Bunny07</arg>
+</arguments>
+<msg timestamp="20200726 04:37:28.070" level="INFO">Typing text 'Bunny07' into text field 'xpath://input[@id='jform_password1']'.</msg>
+<status status="PASS" starttime="20200726 04:37:28.069" endtime="20200726 04:37:28.313"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_passlink}</arg>
+<arg>Bunny07</arg>
+</arguments>
+<msg timestamp="20200726 04:37:28.316" level="INFO">Typing text 'Bunny07' into text field 'xpath://input[@id='jform_password2']'.</msg>
+<status status="PASS" starttime="20200726 04:37:28.315" endtime="20200726 04:37:28.592"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${emaillink}</arg>
+<arg>sharma@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:37:28.593" level="INFO">Typing text 'sharma@gmail.com' into text field 'xpath://input[@id='jform_email1']'.</msg>
+<status status="PASS" starttime="20200726 04:37:28.593" endtime="20200726 04:37:28.934"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_emaillink}</arg>
+<arg>sharma@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:37:28.935" level="INFO">Typing text 'sharma@gmail.com' into text field 'xpath://input[@id='jform_email2']'.</msg>
+<status status="PASS" starttime="20200726 04:37:28.934" endtime="20200726 04:37:29.259"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reg_buttonlink}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:29.260" level="INFO">Clicking button 'xpath://button[@class='validate']'.</msg>
+<status status="PASS" starttime="20200726 04:37:29.259" endtime="20200726 04:37:30.988"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_003.png</arg>
+</arguments>
+<msg timestamp="20200726 04:37:31.377" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_003.png"&gt;&lt;img src="../Snapshots/Registration/TC_003.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:37:30.990" endtime="20200726 04:37:31.378"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>The username you entered is not available</arg>
+</arguments>
+<msg timestamp="20200726 04:37:31.418" level="INFO">Current page contains text 'The username you entered is not available'.</msg>
+<status status="PASS" starttime="20200726 04:37:31.379" endtime="20200726 04:37:31.418"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:37:31.419" endtime="20200726 04:37:33.730"></status>
+</kw>
+<doc>This test case validates the unsuccessful registration due to an existing username</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:37:11.362" endtime="20200726 04:37:33.732" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TC_004_Unsuccessful Registration due to unconfirmed password">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:37:33.737" endtime="20200726 04:37:33.738"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.741" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:33.740" endtime="20200726 04:37:33.741"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.741" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:33.739" endtime="20200726 04:37:33.741"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.name_xpath</arg>
+</arguments>
+<assign>
+<var>${namelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.744" level="INFO">${value} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:37:33.742" endtime="20200726 04:37:33.744"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.745" level="INFO">${namelink} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:37:33.742" endtime="20200726 04:37:33.745"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.username_xpath</arg>
+</arguments>
+<assign>
+<var>${usernamelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.748" level="INFO">${value} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:37:33.747" endtime="20200726 04:37:33.748"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.748" level="INFO">${usernamelink} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:37:33.746" endtime="20200726 04:37:33.748"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.password_xpath</arg>
+</arguments>
+<assign>
+<var>${passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.751" level="INFO">${value} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:37:33.750" endtime="20200726 04:37:33.751"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.752" level="INFO">${passlink} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:37:33.749" endtime="20200726 04:37:33.752"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_password_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.755" level="INFO">${value} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:37:33.754" endtime="20200726 04:37:33.755"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.755" level="INFO">${conf_passlink} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:37:33.753" endtime="20200726 04:37:33.755"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.757" level="INFO">${value} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:37:33.756" endtime="20200726 04:37:33.757"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.758" level="INFO">${emaillink} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:37:33.756" endtime="20200726 04:37:33.758"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.760" level="INFO">${value} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:37:33.759" endtime="20200726 04:37:33.760"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.760" level="INFO">${conf_emaillink} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:37:33.758" endtime="20200726 04:37:33.760"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_button_xpath</arg>
+</arguments>
+<assign>
+<var>${reg_buttonlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.763" level="INFO">${value} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:37:33.762" endtime="20200726 04:37:33.763"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.763" level="INFO">${reg_buttonlink} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:37:33.761" endtime="20200726 04:37:33.763"></status>
+</kw>
+<kw name="Registration_navigation">
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:33.766" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:33.765" endtime="20200726 04:37:33.766"></status>
+</kw>
+<msg timestamp="20200726 04:37:33.767" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:33.764" endtime="20200726 04:37:33.767"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:33.767" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:37:33.767" endtime="20200726 04:37:46.045"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:37:46.046" endtime="20200726 04:37:48.182"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:37:48.242" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:37:48.183" endtime="20200726 04:37:48.242"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:48.243" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:37:48.242" endtime="20200726 04:37:51.023"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200726 04:37:51.087" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20200726 04:37:51.023" endtime="20200726 04:37:51.088"></status>
+</kw>
+<status status="PASS" starttime="20200726 04:37:33.764" endtime="20200726 04:37:51.088"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${namelink}</arg>
+<arg>KarSh3</arg>
+</arguments>
+<msg timestamp="20200726 04:37:51.089" level="INFO">Typing text 'KarSh3' into text field 'xpath://input[@id='jform_name']'.</msg>
+<status status="PASS" starttime="20200726 04:37:51.089" endtime="20200726 04:37:51.361"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${usernamelink}</arg>
+<arg>KarunaShMaya10</arg>
+</arguments>
+<msg timestamp="20200726 04:37:51.362" level="INFO">Typing text 'KarunaShMaya10' into text field 'xpath://input[@id='jform_username']'.</msg>
+<status status="PASS" starttime="20200726 04:37:51.361" endtime="20200726 04:37:51.699"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${passlink}</arg>
+<arg>Bunny07</arg>
+</arguments>
+<msg timestamp="20200726 04:37:51.701" level="INFO">Typing text 'Bunny07' into text field 'xpath://input[@id='jform_password1']'.</msg>
+<status status="PASS" starttime="20200726 04:37:51.700" endtime="20200726 04:37:51.950"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_passlink}</arg>
+<arg>Bunny007</arg>
+</arguments>
+<msg timestamp="20200726 04:37:51.952" level="INFO">Typing text 'Bunny007' into text field 'xpath://input[@id='jform_password2']'.</msg>
+<status status="PASS" starttime="20200726 04:37:51.951" endtime="20200726 04:37:52.282"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${emaillink}</arg>
+<arg>sharma@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:37:52.283" level="INFO">Typing text 'sharma@gmail.com' into text field 'xpath://input[@id='jform_email1']'.</msg>
+<status status="PASS" starttime="20200726 04:37:52.283" endtime="20200726 04:37:52.678"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_emaillink}</arg>
+<arg>sharma@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:37:52.680" level="INFO">Typing text 'sharma@gmail.com' into text field 'xpath://input[@id='jform_email2']'.</msg>
+<status status="PASS" starttime="20200726 04:37:52.679" endtime="20200726 04:37:52.936"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reg_buttonlink}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:52.937" level="INFO">Clicking button 'xpath://button[@class='validate']'.</msg>
+<status status="PASS" starttime="20200726 04:37:52.937" endtime="20200726 04:37:54.216"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_004.png</arg>
+</arguments>
+<msg timestamp="20200726 04:37:54.634" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_004.png"&gt;&lt;img src="../Snapshots/Registration/TC_004.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:37:54.221" endtime="20200726 04:37:54.634"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>The passwords you entered do not match</arg>
+</arguments>
+<msg timestamp="20200726 04:37:54.661" level="INFO">Current page contains text 'The passwords you entered do not match'.</msg>
+<status status="PASS" starttime="20200726 04:37:54.635" endtime="20200726 04:37:54.662"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:37:54.662" endtime="20200726 04:37:56.919"></status>
+</kw>
+<doc>This test case validates the unsuccessful registration due to unconfirmed password</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:37:33.735" endtime="20200726 04:37:56.920" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TC_005_Unsuccessful Registration due to invalid email id">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:37:56.926" endtime="20200726 04:37:56.926"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.929" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:56.928" endtime="20200726 04:37:56.930"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.930" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:56.927" endtime="20200726 04:37:56.930"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.name_xpath</arg>
+</arguments>
+<assign>
+<var>${namelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.934" level="INFO">${value} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:37:56.932" endtime="20200726 04:37:56.934"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.934" level="INFO">${namelink} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:37:56.931" endtime="20200726 04:37:56.935"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.username_xpath</arg>
+</arguments>
+<assign>
+<var>${usernamelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.938" level="INFO">${value} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:37:56.936" endtime="20200726 04:37:56.938"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.939" level="INFO">${usernamelink} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:37:56.935" endtime="20200726 04:37:56.939"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.password_xpath</arg>
+</arguments>
+<assign>
+<var>${passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.942" level="INFO">${value} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:37:56.941" endtime="20200726 04:37:56.943"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.943" level="INFO">${passlink} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:37:56.939" endtime="20200726 04:37:56.943"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_password_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.945" level="INFO">${value} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:37:56.944" endtime="20200726 04:37:56.946"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.946" level="INFO">${conf_passlink} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:37:56.944" endtime="20200726 04:37:56.946"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.948" level="INFO">${value} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:37:56.947" endtime="20200726 04:37:56.949"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.949" level="INFO">${emaillink} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:37:56.947" endtime="20200726 04:37:56.949"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.952" level="INFO">${value} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:37:56.951" endtime="20200726 04:37:56.952"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.952" level="INFO">${conf_emaillink} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:37:56.950" endtime="20200726 04:37:56.952"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_button_xpath</arg>
+</arguments>
+<assign>
+<var>${reg_buttonlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.954" level="INFO">${value} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:37:56.953" endtime="20200726 04:37:56.954"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.955" level="INFO">${reg_buttonlink} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:37:56.953" endtime="20200726 04:37:56.955"></status>
+</kw>
+<kw name="Registration_navigation">
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:37:56.958" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:56.957" endtime="20200726 04:37:56.958"></status>
+</kw>
+<msg timestamp="20200726 04:37:56.958" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:37:56.956" endtime="20200726 04:37:56.959"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:37:56.959" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:37:56.959" endtime="20200726 04:38:07.065"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:38:07.066" endtime="20200726 04:38:09.198"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:38:09.267" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:38:09.199" endtime="20200726 04:38:09.268"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:09.269" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:38:09.268" endtime="20200726 04:38:11.842"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200726 04:38:11.897" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20200726 04:38:11.843" endtime="20200726 04:38:11.897"></status>
+</kw>
+<status status="PASS" starttime="20200726 04:37:56.956" endtime="20200726 04:38:11.898"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${namelink}</arg>
+<arg>KarSh34</arg>
+</arguments>
+<msg timestamp="20200726 04:38:11.899" level="INFO">Typing text 'KarSh34' into text field 'xpath://input[@id='jform_name']'.</msg>
+<status status="PASS" starttime="20200726 04:38:11.898" endtime="20200726 04:38:12.170"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${usernamelink}</arg>
+<arg>KarunaShMaya1077</arg>
+</arguments>
+<msg timestamp="20200726 04:38:12.171" level="INFO">Typing text 'KarunaShMaya1077' into text field 'xpath://input[@id='jform_username']'.</msg>
+<status status="PASS" starttime="20200726 04:38:12.170" endtime="20200726 04:38:12.512"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${passlink}</arg>
+<arg>Bunny007</arg>
+</arguments>
+<msg timestamp="20200726 04:38:12.517" level="INFO">Typing text 'Bunny007' into text field 'xpath://input[@id='jform_password1']'.</msg>
+<status status="PASS" starttime="20200726 04:38:12.516" endtime="20200726 04:38:12.746"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_passlink}</arg>
+<arg>Bunny007</arg>
+</arguments>
+<msg timestamp="20200726 04:38:12.747" level="INFO">Typing text 'Bunny007' into text field 'xpath://input[@id='jform_password2']'.</msg>
+<status status="PASS" starttime="20200726 04:38:12.746" endtime="20200726 04:38:12.963"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${emaillink}</arg>
+<arg>tweetu.gmail</arg>
+</arguments>
+<msg timestamp="20200726 04:38:12.965" level="INFO">Typing text 'tweetu.gmail' into text field 'xpath://input[@id='jform_email1']'.</msg>
+<status status="PASS" starttime="20200726 04:38:12.964" endtime="20200726 04:38:13.201"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_emaillink}</arg>
+<arg>tweetu.gmail</arg>
+</arguments>
+<msg timestamp="20200726 04:38:13.202" level="INFO">Typing text 'tweetu.gmail' into text field 'xpath://input[@id='jform_email2']'.</msg>
+<status status="PASS" starttime="20200726 04:38:13.202" endtime="20200726 04:38:13.447"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reg_buttonlink}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:13.449" level="INFO">Clicking button 'xpath://button[@class='validate']'.</msg>
+<status status="PASS" starttime="20200726 04:38:13.448" endtime="20200726 04:38:13.598"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_005.png</arg>
+</arguments>
+<msg timestamp="20200726 04:38:13.944" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_005.png"&gt;&lt;img src="../Snapshots/Registration/TC_005.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:38:13.603" endtime="20200726 04:38:13.945"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:38:13.945" endtime="20200726 04:38:16.223"></status>
+</kw>
+<doc>This test case validates the unsuccessful registration due to invalid email id</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:37:56.923" endtime="20200726 04:38:16.225" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TC_006_Unsuccessful Registration due to existing email id">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:38:16.240" endtime="20200726 04:38:16.241"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.248" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:16.244" endtime="20200726 04:38:16.248"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.250" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:16.242" endtime="20200726 04:38:16.250"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.name_xpath</arg>
+</arguments>
+<assign>
+<var>${namelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.257" level="INFO">${value} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:38:16.254" endtime="20200726 04:38:16.258"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.259" level="INFO">${namelink} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:38:16.251" endtime="20200726 04:38:16.259"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.username_xpath</arg>
+</arguments>
+<assign>
+<var>${usernamelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.264" level="INFO">${value} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:38:16.262" endtime="20200726 04:38:16.264"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.264" level="INFO">${usernamelink} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:38:16.261" endtime="20200726 04:38:16.264"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.password_xpath</arg>
+</arguments>
+<assign>
+<var>${passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.268" level="INFO">${value} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:38:16.267" endtime="20200726 04:38:16.268"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.269" level="INFO">${passlink} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:38:16.266" endtime="20200726 04:38:16.269"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_password_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.272" level="INFO">${value} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:38:16.271" endtime="20200726 04:38:16.272"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.273" level="INFO">${conf_passlink} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:38:16.270" endtime="20200726 04:38:16.273"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.277" level="INFO">${value} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:38:16.275" endtime="20200726 04:38:16.278"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.279" level="INFO">${emaillink} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:38:16.274" endtime="20200726 04:38:16.279"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.283" level="INFO">${value} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:38:16.281" endtime="20200726 04:38:16.283"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.284" level="INFO">${conf_emaillink} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:38:16.280" endtime="20200726 04:38:16.284"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_button_xpath</arg>
+</arguments>
+<assign>
+<var>${reg_buttonlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.287" level="INFO">${value} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:38:16.286" endtime="20200726 04:38:16.288"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.288" level="INFO">${reg_buttonlink} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:38:16.285" endtime="20200726 04:38:16.288"></status>
+</kw>
+<kw name="Registration_navigation">
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:16.303" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:16.293" endtime="20200726 04:38:16.303"></status>
+</kw>
+<msg timestamp="20200726 04:38:16.305" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:16.292" endtime="20200726 04:38:16.305"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:16.308" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:38:16.306" endtime="20200726 04:38:27.159"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:38:27.159" endtime="20200726 04:38:29.317"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:38:29.399" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:38:29.318" endtime="20200726 04:38:29.399"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:29.400" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:38:29.399" endtime="20200726 04:38:31.521"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200726 04:38:31.599" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20200726 04:38:31.521" endtime="20200726 04:38:31.600"></status>
+</kw>
+<status status="PASS" starttime="20200726 04:38:16.291" endtime="20200726 04:38:31.600"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${namelink}</arg>
+<arg>KarSh345</arg>
+</arguments>
+<msg timestamp="20200726 04:38:31.601" level="INFO">Typing text 'KarSh345' into text field 'xpath://input[@id='jform_name']'.</msg>
+<status status="PASS" starttime="20200726 04:38:31.601" endtime="20200726 04:38:31.895"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${usernamelink}</arg>
+<arg>KarunaShMaya10778</arg>
+</arguments>
+<msg timestamp="20200726 04:38:31.896" level="INFO">Typing text 'KarunaShMaya10778' into text field 'xpath://input[@id='jform_username']'.</msg>
+<status status="PASS" starttime="20200726 04:38:31.895" endtime="20200726 04:38:32.247"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${passlink}</arg>
+<arg>Bunny007</arg>
+</arguments>
+<msg timestamp="20200726 04:38:32.249" level="INFO">Typing text 'Bunny007' into text field 'xpath://input[@id='jform_password1']'.</msg>
+<status status="PASS" starttime="20200726 04:38:32.248" endtime="20200726 04:38:32.515"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_passlink}</arg>
+<arg>Bunny007</arg>
+</arguments>
+<msg timestamp="20200726 04:38:32.516" level="INFO">Typing text 'Bunny007' into text field 'xpath://input[@id='jform_password2']'.</msg>
+<status status="PASS" starttime="20200726 04:38:32.515" endtime="20200726 04:38:32.763"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${emaillink}</arg>
+<arg>saxenamaya@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:38:32.765" level="INFO">Typing text 'saxenamaya@gmail.com' into text field 'xpath://input[@id='jform_email1']'.</msg>
+<status status="PASS" starttime="20200726 04:38:32.764" endtime="20200726 04:38:33.161"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${conf_emaillink}</arg>
+<arg>saxenamaya@gmail.com</arg>
+</arguments>
+<msg timestamp="20200726 04:38:33.163" level="INFO">Typing text 'saxenamaya@gmail.com' into text field 'xpath://input[@id='jform_email2']'.</msg>
+<status status="PASS" starttime="20200726 04:38:33.162" endtime="20200726 04:38:33.503"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reg_buttonlink}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:33.505" level="INFO">Clicking button 'xpath://button[@class='validate']'.</msg>
+<status status="PASS" starttime="20200726 04:38:33.504" endtime="20200726 04:38:35.495"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_006.png</arg>
+</arguments>
+<msg timestamp="20200726 04:38:35.917" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_006.png"&gt;&lt;img src="../Snapshots/Registration/TC_006.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:38:35.497" endtime="20200726 04:38:35.917"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>The email address you entered is already in use or invalid</arg>
+</arguments>
+<msg timestamp="20200726 04:38:35.946" level="INFO">Current page contains text 'The email address you entered is already in use or invalid'.</msg>
+<status status="PASS" starttime="20200726 04:38:35.918" endtime="20200726 04:38:35.946"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:38:35.947" endtime="20200726 04:38:38.216"></status>
+</kw>
+<doc>This test case validates the unsuccessful registration due to existing email id</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:38:16.233" endtime="20200726 04:38:38.217" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TC_007_Unsuccessful Registration due to empty fields">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200726 04:38:38.225" endtime="20200726 04:38:38.227"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.233" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:38.230" endtime="20200726 04:38:38.233"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.234" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:38.228" endtime="20200726 04:38:38.235"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.name_xpath</arg>
+</arguments>
+<assign>
+<var>${namelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.241" level="INFO">${value} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:38:38.238" endtime="20200726 04:38:38.241"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.242" level="INFO">${namelink} = //input[@id='jform_name']</msg>
+<status status="PASS" starttime="20200726 04:38:38.237" endtime="20200726 04:38:38.242"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.username_xpath</arg>
+</arguments>
+<assign>
+<var>${usernamelink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.249" level="INFO">${value} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:38:38.247" endtime="20200726 04:38:38.250"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.251" level="INFO">${usernamelink} = //input[@id='jform_username']</msg>
+<status status="PASS" starttime="20200726 04:38:38.244" endtime="20200726 04:38:38.251"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.password_xpath</arg>
+</arguments>
+<assign>
+<var>${passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.254" level="INFO">${value} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:38:38.253" endtime="20200726 04:38:38.254"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.255" level="INFO">${passlink} = //input[@id='jform_password1']</msg>
+<status status="PASS" starttime="20200726 04:38:38.252" endtime="20200726 04:38:38.255"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_password_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_passlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.259" level="INFO">${value} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:38:38.257" endtime="20200726 04:38:38.259"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.259" level="INFO">${conf_passlink} = //input[@id='jform_password2']</msg>
+<status status="PASS" starttime="20200726 04:38:38.257" endtime="20200726 04:38:38.260"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.263" level="INFO">${value} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:38:38.262" endtime="20200726 04:38:38.263"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.264" level="INFO">${emaillink} = //input[@id='jform_email1']</msg>
+<status status="PASS" starttime="20200726 04:38:38.261" endtime="20200726 04:38:38.265"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.confirm_email_address_xpath</arg>
+</arguments>
+<assign>
+<var>${conf_emaillink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.268" level="INFO">${value} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:38:38.267" endtime="20200726 04:38:38.268"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.269" level="INFO">${conf_emaillink} = //input[@id='jform_email2']</msg>
+<status status="PASS" starttime="20200726 04:38:38.266" endtime="20200726 04:38:38.269"></status>
+</kw>
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_button_xpath</arg>
+</arguments>
+<assign>
+<var>${reg_buttonlink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.272" level="INFO">${value} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:38:38.271" endtime="20200726 04:38:38.272"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.273" level="INFO">${reg_buttonlink} = //button[@class='validate']</msg>
+<status status="PASS" starttime="20200726 04:38:38.270" endtime="20200726 04:38:38.273"></status>
+</kw>
+<kw name="Registration_navigation">
+<kw name="Read_from_Object_Repository" library="Resources">
+<arguments>
+<arg>Registration.registration_link_xpath</arg>
+</arguments>
+<assign>
+<var>${reglink}</var>
+</assign>
+<kw name="Read From Json" library="Locators">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20200726 04:38:38.277" level="INFO">${value} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:38.276" endtime="20200726 04:38:38.277"></status>
+</kw>
+<msg timestamp="20200726 04:38:38.278" level="INFO">${reglink} = //a[text()='Registration ']</msg>
+<status status="PASS" starttime="20200726 04:38:38.275" endtime="20200726 04:38:38.278"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:38.280" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<status status="PASS" starttime="20200726 04:38:38.279" endtime="20200726 04:38:46.908"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200726 04:38:46.908" endtime="20200726 04:38:49.051"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20200726 04:38:49.121" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20200726 04:38:49.051" endtime="20200726 04:38:49.121"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reglink}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:49.121" level="INFO">Clicking link 'xpath://a[text()='Registration ']'.</msg>
+<status status="PASS" starttime="20200726 04:38:49.121" endtime="20200726 04:38:51.245"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Register</arg>
+</arguments>
+<msg timestamp="20200726 04:38:51.303" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20200726 04:38:51.245" endtime="20200726 04:38:51.303"></status>
+</kw>
+<status status="PASS" starttime="20200726 04:38:38.274" endtime="20200726 04:38:51.304"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${namelink}</arg>
+<arg>KarSh3456</arg>
+</arguments>
+<msg timestamp="20200726 04:38:51.305" level="INFO">Typing text 'KarSh3456' into text field 'xpath://input[@id='jform_name']'.</msg>
+<status status="PASS" starttime="20200726 04:38:51.304" endtime="20200726 04:38:51.613"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${usernamelink}</arg>
+<arg>KarunaShMaya107789</arg>
+</arguments>
+<msg timestamp="20200726 04:38:51.617" level="INFO">Typing text 'KarunaShMaya107789' into text field 'xpath://input[@id='jform_username']'.</msg>
+<status status="PASS" starttime="20200726 04:38:51.616" endtime="20200726 04:38:51.944"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${reg_buttonlink}</arg>
+</arguments>
+<msg timestamp="20200726 04:38:51.946" level="INFO">Clicking button 'xpath://button[@class='validate']'.</msg>
+<status status="PASS" starttime="20200726 04:38:51.945" endtime="20200726 04:38:52.118"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>C:/Users/Admin/PycharmProjects/FirstFramework/Snapshots/Registration/TC_007.png</arg>
+</arguments>
+<msg timestamp="20200726 04:38:52.501" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Snapshots/Registration/TC_007.png"&gt;&lt;img src="../Snapshots/Registration/TC_007.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200726 04:38:52.127" endtime="20200726 04:38:52.501"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200726 04:38:52.502" endtime="20200726 04:38:54.761"></status>
+</kw>
+<doc>This test case validates the unsuccessful registration due to empty fields</doc>
+<tags>
+<tag>Functional</tag>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" starttime="20200726 04:38:38.221" endtime="20200726 04:38:54.764" critical="yes"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20200726 04:36:21.029" endtime="20200726 04:38:54.776"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="7" fail="0">Functional</stat>
+<stat pass="7" fail="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="Registration">Registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

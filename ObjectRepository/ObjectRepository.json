@@ -1,0 +1,13 @@
+{
+  "Registration":
+  {
+    "registration_link_xpath" : "//a[text()='Registration ']",
+    "name_xpath" : "//input[@id='jform_name']",
+    "username_xpath" : "//input[@id='jform_username']",
+    "password_xpath" : "//input[@id='jform_password1']",
+    "confirm_password_xpath" : "//input[@id='jform_password2']",
+    "email_address_xpath" : "//input[@id='jform_email1']",
+    "confirm_email_address_xpath": "//input[@id='jform_email2']",
+    "registration_button_xpath" : "//button[@class='validate']"
+  }
+}
